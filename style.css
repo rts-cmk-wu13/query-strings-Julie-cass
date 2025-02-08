@@ -1,0 +1,35 @@
+*{
+    margin: 0 auto;
+}
+
+body{
+    background-color: black;
+}
+
+.wrapper{
+    max-width: 90rem;
+background-color: white;
+}
+
+h1{
+    font-size: 3em;
+}
+
+div#root{
+    width: 75rem;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    background-color: #CEF9FF;
+    font-size: 1em;
+}
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
