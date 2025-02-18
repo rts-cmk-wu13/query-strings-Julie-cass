@@ -1,9 +1,11 @@
+/* ?overall css for page */
+
 * {
     margin: 0 auto;
 }
 
 body {
-    background-color: black;
+    background-color: #132235;
     font-family: "Inter", serif;
 
 }
@@ -11,37 +13,65 @@ body {
 .wrapper {
     max-width: 90rem;
     background-color: white;
+    
 }
 
-h1 .title {
+h1{
     font-size: 3em;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
+/* 
 div#root {
+
+} 
+*/
+
+/* ?to put each offer in their own box and on a row */
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 4em;
+
     width: 75rem;
 }
 
-section{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 2em;
-
-    background-color: #CEF9FF;
-}
-
-
-section a {
-    text-decoration: none;
-    font-size: 1em;
-    color: black;
-}
-
-img {
+/* ?image */
+.card_image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-heart_btn--selected{
-background-color:red;
+/* ? baby blue around more and favorite button */
+.card_box div {
+    padding: 1em;
+    background-color: #CEF9FF;
 }
+
+/* ?mix of favorite button and link to apartment(mostly link to apartment) */
+.card_link,
+.heart_btn {
+    text-decoration: none;
+    font-size: 1em;
+
+    color: black;
+}
+
+/* .card_link {
+
+} */
+
+
+/* ?favorite button */
+.heart_btn {
+    background-color: #CEF9FF;
+    border: none;
+}
+
+heart_btn--selected {
+    color: red;
+}
+
