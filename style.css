@@ -5,16 +5,36 @@
 }
 
 body {
-    background-color: #132235;
+   
     font-family: "Inter", serif;
 
 }
-
-.wrapper {
-    max-width: 90rem;
-    background-color: white;
-    
+ :root{
+    color-scheme: light dark;
+    --dark-color: hsl(235, 17%, 12%);
+    --light-color: hsl(0 0% 98%);
+    --lightBlue-color: hsl(187, 100%, 90%);
+    --darkBlue-color: hsl(187, 57%, 33%);
 }
+
+[data-dark="true"]{
+    color-scheme: dark;
+}
+[data-dark="false"]{
+    color-scheme: light;
+}
+html{
+    color: light-dark(var(--dark-color),var(--light-color));
+    background-color: light-dark(var(--light-color),var(--dark-color));
+}
+.card_box div,.card_box a,.heart_btn {
+    color: light-dark(var(--dark-color),var(--light-color));
+    background-color: light-dark(var(--lightBlue-color),var(--darkBlue-color));
+}
+
+
+
+
 
 h1{
     font-size: 3em;
@@ -22,11 +42,6 @@ h1{
     padding-top: 1em;
 }
 
-/* 
-div#root {
-
-} 
-*/
 
 /* ?to put each offer in their own box and on a row */
 section {
@@ -48,7 +63,6 @@ section {
 /* ? baby blue around more and favorite button */
 .card_box div {
     padding: 1em;
-    background-color: #CEF9FF;
 }
 
 /* ?mix of favorite button and link to apartment(mostly link to apartment) */
@@ -56,19 +70,13 @@ section {
 .heart_btn {
     text-decoration: none;
     font-size: 1em;
-
-    color: black;
 }
 
-/* .card_link {
-
-} */
 
 
 /* ?favorite button */
 .heart_btn {
-    background-color: #CEF9FF;
-    border: none;
+   border: none;
 }
 
 heart_btn--selected {

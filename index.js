@@ -1,4 +1,4 @@
-let favorites = readFromLocalStoarge("favorites")
+let favorites = readFromLocalStorage("favorites")
 if (!favorites) favorites = []
 
 

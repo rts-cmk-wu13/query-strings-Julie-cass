@@ -25,7 +25,7 @@ console.log(localStorage)
  * @param {string} key 
  * @returns {string | number | boolean | object | any[]}
  */
-function readFromLocalStoarge(key){
+function readFromLocalStorage(key){
     return JSON.parse(localStorage.getItem(key));
 
 }
